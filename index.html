@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/superhero/bootstrap.min.css" integrity="sha384-HnTY+mLT0stQlOwD3wcAzSVAZbrBp141qwfR4WfTqVQKSgmcgzk+oP0ieIyrxiFO" crossorigin="anonymous">
+    <title>Firebase CRUD</title>
+</head>
+
+<body>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <input type="text" id="product-name" class="product-control" placeholder="Nombre de product" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="product-price" class="product-control" placeholder="Precio del Producto">
+                            </div>
+                            <button class="btn btn-primary" id="btn-task-form">
+                                Save
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        import {
+            firestore
+        } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js';
+        const firebaseConfig = {
+            apiKey: "AIzaSyBtbazohBatW8s2c0GIn8o_RyG1ltQEQPI",
+            authDomain: "fazt-crud-fb-fb917.firebaseapp.com",
+            databaseURL: "https://fazt-crud-fb-fb917-default-rtdb.firebaseio.com",
+            projectId: "fazt-crud-fb-fb917",
+            storageBucket: "fazt-crud-fb-fb917.appspot.com",
+            messagingSenderId: "849216022704",
+            appId: "1:849216022704:web:a8fccf813ea966835a7375"
+        };
+        const app = initializeApp(firebaseConfig);
+    </script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
